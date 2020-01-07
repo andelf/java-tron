@@ -22,7 +22,7 @@ public class CreateCommonTransactionTest {
   public static void testCreateUpdateBrokerageContract() {
     WalletBlockingStub walletStub = WalletGrpc
         .newBlockingStub(ManagedChannelBuilder.forTarget(fullnode)
-            .usePlaintext(true)
+            .usePlaintext()
             .build());
     UpdateBrokerageContract.Builder updateBrokerageContract = UpdateBrokerageContract.newBuilder();
     updateBrokerageContract.setOwnerAddress(

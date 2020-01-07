@@ -62,7 +62,7 @@ public class ContractScenario014 {
   @BeforeClass(enabled = true)
   public void beforeClass() {
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
   }
@@ -231,5 +231,3 @@ public class ContractScenario014 {
     }
   }
 }
-
-

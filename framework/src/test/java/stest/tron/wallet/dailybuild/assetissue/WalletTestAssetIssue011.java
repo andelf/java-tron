@@ -66,7 +66,7 @@ public class WalletTestAssetIssue011 {
     PublicMethed.printAddress(transferAssetCreateKey);
 
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
   }
@@ -133,5 +133,3 @@ public class WalletTestAssetIssue011 {
     }
   }
 }
-
-

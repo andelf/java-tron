@@ -80,12 +80,12 @@ public class WalletTestAccount002 {
   @BeforeClass
   public void beforeClass() {
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
     searchChannelFull = ManagedChannelBuilder.forTarget(searchFullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     searchBlockingStubFull = WalletGrpc.newBlockingStub(searchChannelFull);
   }
@@ -163,5 +163,3 @@ public class WalletTestAccount002 {
     }
   }
 }
-
-

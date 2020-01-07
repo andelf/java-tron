@@ -49,7 +49,7 @@ public class TvmContract {
   public void beforeClass() {
     PublicMethed.printAddress(contract008Key);
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
     Assert.assertTrue(PublicMethed.sendcoin(contract008Address, 500000000L, fromAddress,
@@ -150,5 +150,3 @@ public class TvmContract {
     }
   }
 }
-
-

@@ -94,12 +94,12 @@ public class WalletTestAssetIssue009 {
   @BeforeClass(enabled = false)
   public void beforeClass() {
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
     channelSolidity = ManagedChannelBuilder.forTarget(soliditynode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubSolidity = WalletSolidityGrpc.newBlockingStub(channelSolidity);
   }
@@ -171,5 +171,3 @@ public class WalletTestAssetIssue009 {
     return TransactionUtils.sign(transaction, ecKey);
   }
 }
-
-

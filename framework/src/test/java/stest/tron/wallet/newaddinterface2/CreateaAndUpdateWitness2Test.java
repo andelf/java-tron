@@ -83,7 +83,7 @@ public class CreateaAndUpdateWitness2Test {
     logger.info(Base58.encode58Check(PublicMethed.getFinalAddress(lowBalTest)));
 
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
   }
@@ -433,5 +433,3 @@ public class CreateaAndUpdateWitness2Test {
     return TransactionUtils.sign(transaction, ecKey);
   }
 }
-
-

@@ -71,7 +71,7 @@ public class ContractTrcToken067 {
   public void beforeClass() {
 
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
@@ -461,5 +461,3 @@ public class ContractTrcToken067 {
     }
   }
 }
-
-

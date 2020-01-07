@@ -155,31 +155,31 @@ public class TestExceptionCodeAndAbi {
   public void beforeClass() {
     PublicMethed.printAddress(testKeyForAssetIssue016);
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
     channelFull1 = ManagedChannelBuilder.forTarget(fullnode1)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull1 = WalletGrpc.newBlockingStub(channelFull1);
 
     channelFull2 = ManagedChannelBuilder.forTarget(fullnode2)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull2 = WalletGrpc.newBlockingStub(channelFull2);
 
     channelFull3 = ManagedChannelBuilder.forTarget(fullnode3)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull3 = WalletGrpc.newBlockingStub(channelFull3);
 
     channelFull4 = ManagedChannelBuilder.forTarget(fullnode4)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull4 = WalletGrpc.newBlockingStub(channelFull4);
 
     channelFull5 = ManagedChannelBuilder.forTarget(fullnode5)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull5 = WalletGrpc.newBlockingStub(channelFull5);
 
@@ -388,6 +388,3 @@ public class TestExceptionCodeAndAbi {
   }
 
 }
-
-
-

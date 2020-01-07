@@ -72,7 +72,7 @@ public class DelayTransaction003 {
   @BeforeClass(enabled = false)
   public void beforeClass() {
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
   }
@@ -196,5 +196,3 @@ public class DelayTransaction003 {
     }
   }
 }
-
-

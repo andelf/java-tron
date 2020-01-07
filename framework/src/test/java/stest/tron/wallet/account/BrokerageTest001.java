@@ -45,12 +45,12 @@ public class BrokerageTest001 {
   public void beforeClass() {
 
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
     channelSolidity = ManagedChannelBuilder.forTarget(solidytnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubSolidyty = WalletSolidityGrpc.newBlockingStub(channelSolidity);
 

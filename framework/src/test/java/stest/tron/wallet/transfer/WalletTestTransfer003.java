@@ -139,17 +139,17 @@ public class WalletTestTransfer003 {
   public void beforeClass() {
     logger.info(testKeyForSendCoin);
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
     channelFull1 = ManagedChannelBuilder.forTarget(fullnode1)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull1 = WalletGrpc.newBlockingStub(channelFull1);
 
     channelSolidity = ManagedChannelBuilder.forTarget(soliditynode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubSolidity = WalletSolidityGrpc.newBlockingStub(channelSolidity);
     blockingStubExtension = WalletExtensionGrpc.newBlockingStub(channelSolidity);
@@ -391,5 +391,3 @@ public class WalletTestTransfer003 {
 
   }
 }
-
-

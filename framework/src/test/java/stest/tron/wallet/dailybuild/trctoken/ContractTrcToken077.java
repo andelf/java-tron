@@ -58,7 +58,7 @@ public class ContractTrcToken077 {
   public void beforeClass() {
     PublicMethed.printAddress(testKeyForGrammarAddress);
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
     logger.info(Long.toString(PublicMethed.queryAccount(testNetAccountKey, blockingStubFull)

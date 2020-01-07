@@ -59,7 +59,7 @@ public class WalletTestAccount010 {
     PublicMethed.printAddress(account010Key);
     PublicMethed.printAddress(account010SecondKey);
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
@@ -128,5 +128,3 @@ public class WalletTestAccount010 {
     }
   }
 }
-
-

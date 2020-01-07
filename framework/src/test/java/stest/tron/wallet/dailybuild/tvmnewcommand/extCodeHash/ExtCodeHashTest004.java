@@ -71,7 +71,7 @@ public class ExtCodeHashTest004 {
   public void beforeClass() {
 
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
@@ -256,5 +256,3 @@ public class ExtCodeHashTest004 {
     }
   }
 }
-
-

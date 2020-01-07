@@ -144,7 +144,7 @@ public class MainNetVoteOrFreezeOrCreate {
   @BeforeClass(enabled = false)
   public void beforeClass() {
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
     startTime = System.currentTimeMillis();
@@ -360,4 +360,3 @@ public class MainNetVoteOrFreezeOrCreate {
     return TransactionUtils.sign(transaction, ecKey);
   }
 }
-

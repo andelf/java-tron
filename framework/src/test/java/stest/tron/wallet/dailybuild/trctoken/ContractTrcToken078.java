@@ -78,7 +78,7 @@ public class ContractTrcToken078 {
   public void beforeClass() {
     PublicMethed.printAddress(testKeyForinternalTxsAddress);
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 

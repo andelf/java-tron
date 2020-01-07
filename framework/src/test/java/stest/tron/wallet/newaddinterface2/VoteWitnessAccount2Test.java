@@ -74,12 +74,12 @@ public class VoteWitnessAccount2Test {
     WalletClient.setAddressPreFixByte(CommonConstant.ADD_PRE_FIX_BYTE_MAINNET);
     logger.info("Pre fix byte =====  " + WalletClient.getAddressPreFixByte());
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
     searchChannelFull = ManagedChannelBuilder.forTarget(searchFullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     searchBlockingStubFull = WalletGrpc.newBlockingStub(searchChannelFull);
 
@@ -589,5 +589,3 @@ public class VoteWitnessAccount2Test {
     return TransactionUtils.sign(transaction, ecKey);
   }
 }
-
-

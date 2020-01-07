@@ -50,7 +50,7 @@ public class GetBlockByLatestNum2Test {
   @BeforeClass
   public void beforeClass() {
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
   }
@@ -178,5 +178,3 @@ public class GetBlockByLatestNum2Test {
 
   }
 }
-
-

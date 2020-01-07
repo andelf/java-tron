@@ -66,7 +66,7 @@ public class Create2Test015 {
   public void beforeClass() {
 
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
@@ -499,5 +499,3 @@ public class Create2Test015 {
     }
   }
 }
-
-

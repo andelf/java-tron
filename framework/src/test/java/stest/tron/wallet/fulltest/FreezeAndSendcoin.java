@@ -139,7 +139,7 @@ public class FreezeAndSendcoin {
     logger.info(testKeyForFreeze);
     logger.info(transferAssetCreateKey);
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
   }
@@ -168,7 +168,7 @@ public class FreezeAndSendcoin {
       fullnode = Configuration.getByPath("testng.conf").getStringList("fullnode.ip.list")
           .get(randNum);
       channelFull = ManagedChannelBuilder.forTarget(fullnode)
-          .usePlaintext(true)
+          .usePlaintext()
           .build();
       blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
@@ -321,5 +321,3 @@ public class FreezeAndSendcoin {
   }
 
 }
-
-

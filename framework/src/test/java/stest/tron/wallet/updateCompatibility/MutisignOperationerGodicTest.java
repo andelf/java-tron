@@ -100,7 +100,7 @@ public class MutisignOperationerGodicTest {
     Wallet wallet = new Wallet();
     Wallet.setAddressPreFixByte(CommonConstant.ADD_PRE_FIX_BYTE_MAINNET);
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
 
@@ -132,7 +132,7 @@ public class MutisignOperationerGodicTest {
   @BeforeClass(enabled = true)
   public void beforeClass() {
     channelFull = ManagedChannelBuilder.forTarget(fullnode)
-        .usePlaintext(true)
+        .usePlaintext()
         .build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
     Assert.assertTrue(PublicMethed.sendcoin(mutisignAccountAddress, 1000_000_000_000L, fromAddress,
@@ -502,5 +502,3 @@ public class MutisignOperationerGodicTest {
     }
   }
 }
-
-

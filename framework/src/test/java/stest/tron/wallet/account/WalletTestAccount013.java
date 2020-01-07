@@ -72,7 +72,7 @@ public class WalletTestAccount013 {
   @BeforeClass(enabled = true)
   public void beforeClass() {
     PublicMethed.printAddress(testKey002);
-    channelFull = ManagedChannelBuilder.forTarget(fullnode).usePlaintext(true).build();
+    channelFull = ManagedChannelBuilder.forTarget(fullnode).usePlaintext().build();
     blockingStubFull = WalletGrpc.newBlockingStub(channelFull);
   }
 
